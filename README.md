@@ -1,4 +1,4 @@
 land.copernicus.plonebuildout
 =============================
 
-Plone buildout for land.copernicus.eu
+Plone buildout for http://land.copernicus.eu
