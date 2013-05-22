@@ -97,7 +97,7 @@ several zope instances, one zeo server and one debug instance.
 
 To run the debug instance use::
 
-   $ ./bin/serviceWWW fg
+   $ ./bin/instance fg
 
 Run buildout on unicorn (unicorn-devel)
 ---------------------------------------
