@@ -131,7 +131,7 @@ In this property you have to paste the API KEY, what you can generate at https:/
 
 
 EEA deployment
-==============
+--------------
 
 The project name is `Copernicus Land Monitoring Services` and it's based on Zope/Plone framework. 
 
@@ -164,7 +164,7 @@ Resources
 =========
 
 Hardware
---------
+~~~~~~~~
 
 Minimum requirements:
 * 2048MB RAM
@@ -178,7 +178,7 @@ Recommended:
 
 
 Software
---------
+~~~~~~~~
 
 Any recent Linux version.
 apache2, memcached, any STMP local server.
