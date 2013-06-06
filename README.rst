@@ -15,8 +15,7 @@ is touched, so the user doesn't need any special priviliges.
 
 There are three configurations available for running this buildout:
  1. one for developers (devel)
- 2. one for pre-production (unicorn)
- 3. one for production (deployment)
+ 2. one for production (deployment)
 
 Prerequisites - What needs to be installed by sys admin
 -------------------------------------------------------
@@ -100,15 +99,6 @@ To run the debug instance use::
 
    $ ./bin/instance fg
 
-Run buildout on unicorn (unicorn-devel)
----------------------------------------
-The above instructions are for installing this buildout on a pre-production
-server (Unicorn)::
-
-   $ git clone git@github.com:eea/land.copernicus.plonebuildout.git
-   $ cd land.copernicus.plonebuildout
-   $ ./install.sh -c unicorn-devel.cfg
-   $ ./bin/buildout -c unicorn-devel.cfg
 
 Cron jobs to be setup on production and development
 ---------------------------------------------------
@@ -118,11 +108,6 @@ On production::
    $ crontab -e -u zope-www
    @reboot cd /var/local/land.copernicus.plonebuildout && bin/zope-start
 
-On pre-production (Unicorn)::
-
-   $ crontab -e
-   # sync land.copernicus data.fs (Unicorn)
-   0 02 * * Mon /var/eeawebtest/land.copernicus.plonebuildout.DEVEL/etc/cron/land_copernicus_sync.sh > /dev/null
 
 Portal Property for Google Maps Api Key
 ---------------------------------------
