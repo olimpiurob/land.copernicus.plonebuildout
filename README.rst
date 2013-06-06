@@ -38,6 +38,7 @@ administrator.
  * libc6-dev (Debian/Ubuntu) / glibc-devel (RedHat/CentOS)
  * libxml2-devel
  * libxslt-devel
+ * libcrypto
  * libsvn-dev and libaprutil1-dev (on Debian/Ubuntu)
  * apr-util-devel and subversion-devel (on RedHat/CentOS)
  * cyrus-sasl-devel (on RedHat/CentOS) or libsasl2-dev (on Debian/Ubuntu) as OpenLDAP dependency
