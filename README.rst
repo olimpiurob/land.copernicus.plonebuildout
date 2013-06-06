@@ -28,25 +28,25 @@ before you run buildout. These must be globally installed by the server
 administrator.
 
  * python 2.6
- * python-dev (for python 2.6)
+ * python-dev (Debian/Ubuntu) / python-devel (RedHat/CentOS) (for python 2.6)
  * wget
  * lynx
  * poppler-utils (for pdftotext etc)
  * tar
  * gcc
- * libc6-dev
+ * make
+ * libc6-dev (Debian/Ubuntu) / glibc-devel (RedHat/CentOS)
  * libxml2-devel
  * libxslt-devel
- * libsvn-dev and libaprutil1-dev (on Ubuntu)
- * apr-util-devel and subversion-devel (on Redhat)
- * cyrus-sasl-devel (on Centos) or libsasl2-dev (on Ubuntu) as OpenLDAP dependency
- * wv (used to index Word documents) <http://wvware.sourceforge.net/>
-   May be installed after Plone install.
+ * libsvn-dev and libaprutil1-dev (on Debian/Ubuntu)
+ * apr-util-devel and subversion-devel (on RedHat/CentOS)
+ * cyrus-sasl-devel (on RedHat/CentOS) or libsasl2-dev (on Debian/Ubuntu) as OpenLDAP dependency
+ * wv (used to index Word documents) <http://wvware.sourceforge.net/> (can be installed after Plone install)
  * graphiz, graphiz-devel and graphiz-gd (read more under eea.relations)
  * xpdf and pdftk (read more under eea.converter)
  * ImageMagick ver 6.3.7+ (read more under eea.converter)
  * git
- * libcurl3-dev (Debian/Ubuntu) / curl-devel (CentOS)
+ * libcurl3-dev (Debian/Ubuntu) / curl-devel (RedHat/CentOS)
 
 Run buildout for development
 ----------------------------
