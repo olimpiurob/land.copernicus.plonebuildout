@@ -13,7 +13,7 @@ Everything is installed in a local folder. This prevents conflicts with
 already existing python and zope packages. Nothing other than this folder
 is touched, so the user doesn't need any special priviliges.
 
-There are three configurations available for running this buildout:
+There are two configurations available for running this buildout:
  1. one for developers (devel)
  2. one for production (deployment)
 
