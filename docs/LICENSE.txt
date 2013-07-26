@@ -1,4 +1,4 @@
-  Land Copernicus Buildout is copyright European Environment Agency
+  EEA Plone common buildout is copyright European Environment Agency
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
