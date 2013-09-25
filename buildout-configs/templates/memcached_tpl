@@ -1,0 +1,25 @@
+#!/bin/sh
+ export LD_LIBRARY_PATH=${libevent:location}/lib
+
+ PIDFILE=${buildout:directory}/var/memcached.pid.${configuration:memcache-port}
+    case "$1" in
+      start)
+       ${memcached:location}/bin/memcached -d -u ${configuration:effective-user} -P $PIDFILE -m ${configuration:memcache-size}
+        ;;
+      stop)
+        kill `cat $PIDFILE`
+        rm $PIDFILE
+        ;;
+      restart|force-reload)
+        $0 stop
+        sleep 1
+        $0 start
+        ;;
+      status)
+        ps -p `cat $PIDFILE` > /dev/null 2>&1 && echo Running || echo "Not Running"
+        ;;
+      *)
+        echo "Usage: $SCRIPTNAME {start|stop|restart}" >&2
+        exit 1
+        ;;
+    esac
