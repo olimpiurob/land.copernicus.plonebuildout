@@ -5,8 +5,9 @@ set -e
 FINDLINKS='http://eggrepo.eea.europa.eu/simple'
 INDEX='http://pypi.python.org/simple'
 
-SETUPTOOLS=`grep "setuptools\s*\=\s*" versions.cfg | sed 's/ *$//g' | sed 's/=$//g' | sed 's/\s*=\s*/==/g'`
-ZCBUILDOUT=`grep "zc\.buildout\s*=\s*" versions.cfg | sed 's/\s*=\s*/==/g'`
+KGS_ROOT='https://raw.github.com/olimpiurob/eea.plonebuildout.core/master/buildout-configs/kgs/'
+SETUPTOOLS=`curl -s $KGS_ROOT"latest_versions.cfg" | xargs echo $KGS_ROOT$1 | sed 's/ //g' | xargs -0 curl -s | grep "setuptools\s*\=\s*" | sed 's/ *$//g' | sed 's/=$//g' | sed 's/\s*=\s*/==/g'`
+ZCBUILDOUT=`curl -s $KGS_ROOT"latest_versions.cfg" | xargs echo $KGS_ROOT$1 | sed 's/ //g' | xargs -0 curl -s | grep "zc\.buildout\s*=\s*" | sed 's/\s*=\s*/==/g'`
 
 if [ -z "$SETUPTOOLS" ]; then
   SETUPTOOLS="setuptools"
